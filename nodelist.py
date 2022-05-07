@@ -22,7 +22,7 @@ class LinkedList:
         else:
             self.head = new_node
 
-    # Method to reverse the list
+    # method to reverse the list
     def reverse(self, head):
 
         if head is None or head.next is None:
