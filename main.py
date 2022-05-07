@@ -1,15 +1,5 @@
 from nodelist import Node, LinkedList
 
-l1 = LinkedList()
-l1.insert(3)
-l1.insert(2)
-l1.insert(1)
-
-l2 = LinkedList()
-l2.insert(5)
-l2.insert(6)
-l2.insert(8)
-
 
 class Solution:
     @staticmethod
@@ -36,12 +26,23 @@ class Solution:
 
         return dummy.next
 
-    # print method for the node list
-    def print_nl(self, nodelist1, nodelist2):
+    # converts the nodelist to a number
+    def nodelist_to_number(self, nodelist1, nodelist2):
         node = self.add_two_numbers(nodelist1, nodelist2)
+        result = ""
         while node:
-            print(node.val, end='')
+            result += str(node.val)
             node = node.next
+        return int(result)
 
-
-Solution().print_nl(l1.head, l2.head)
+# l1 = LinkedList()
+# l1.insert(3)
+# l1.insert(2)
+# l1.insert(1)
+#
+# l2 = LinkedList()
+# l2.insert(5)
+# l2.insert(6)
+# l2.insert(8)
+#
+# print(Solution().nodelist_to_number(l1.head, l2.head))
